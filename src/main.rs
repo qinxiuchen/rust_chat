@@ -33,6 +33,7 @@ fn main() {
                                     error!("connection closed");
                                     break;
                                 }
+                                println!("reading line: {:?}", line);
                                 //原样输出到客户端，后续优化错误处理
                                 writer.write_all(line.as_bytes()).unwrap();
                                 //清除line中的数据
